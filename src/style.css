@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.input-section{
+   margin-top: 5%;
+}
+
+p.p-id, p.p-name, p.p-price {
+   width: 50%;
+   margin-left: 25%;
+   padding: 10px 15px;
+}
+
+input#product-id, input#product-name, input#product-price{
+    border: 1px solid grey;
+    width: 50%;
+    padding: 8px;
+    border-radius: 7px;
+    margin-left: 5%;
+    outline: none;
+    padding-left: 2%;
+}
+input#product-name{
+    margin-left: 1.5%;
+}
+
+input#product-price{
+    margin-left: 2%;
+}
+
+.button{
+    text-align: center;
+}
+
+button#add-button{
+    padding: 10px 20px;
+    margin: auto;
+    margin-top: 2%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: rgb(159, 220, 38);
+    font-weight: bold;
+}
+
+table{
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 4%;
+}
+
+table,tr,th{
+    border:1px solid grey;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 6px 8px;
+    border: 1px solid grey;
+}
+th{
+    padding-left: 5%;
+}
+
+table#result{
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+}
