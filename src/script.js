@@ -1,3 +1,7 @@
+
+let f  = 0;
+let proList = [];
+
 function submitForm(){
     var val1 = document.getElementById("product-id").value;
     var val2 = document.getElementById("product-name").value;
@@ -11,7 +15,6 @@ function submitForm(){
     }
     else
       document.getElementById("result-table").innerHTML = "<p>Invalid Text</p>";
-
 }
 
 function checkData(val1,val2,val3){
@@ -25,12 +28,26 @@ function checkData(val1,val2,val3){
 function store(val1, val2, val3){
     parse_val1 = parseInt(val1);
     parse_val3 = parseInt(val3);
-    const myArray = { "id": parse_val1, "name" : val2, "price" : parse_val3};
-    return myArray;
+    
+   for (var x = 0; x < proList.length; x++ ){
+       if(proList[x].id == parse_val1){
+            alert("Product ID already exist");
+            return proList;
+       }
+   }
+
+   const myArray = { "id": parse_val1, "name" : val2, "price" : parse_val3};
+  
+
+   proList.push(myArray);
+   return proList;
+
+
 }
 
 function display(result){
-    document.getElementById("result").innerHTML += "<tr> <td>" + result["id"] + "</td> <td>"+ result["name"]  + "</td ><td>"+ result["price"] + "</td> <tr/>";
+    for(let i = f; i < result.length; i++,f++)
+    document.getElementById("result").innerHTML += "<tr> <td>" + result[i].id + "</td> <td>"+ result[i].name  + "</td ><td>"+ result[i].price + "</td> <tr/>";
 }
 
 
